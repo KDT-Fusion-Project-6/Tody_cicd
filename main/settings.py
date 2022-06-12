@@ -14,9 +14,9 @@ from pathlib import Path
 import os
 
 
-# import pymysql # 추가
+import pymysql # 추가
 # pymysql django ORM 연동
-# pymysql.install_as_MySQLdb() # 추가
+pymysql.install_as_MySQLdb() # 추가
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -30,8 +30,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-1md$_s_w4+@o@rwe48mp4r7l^0x#$oayc6^4o5@9!o0#qs8-0i'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 ALLOWED_HOSTS = ['*', 'local_host']
+CSRF_TRUSTED_ORIGINS = ['web.mymincloud.com', 'tody.mymincloud.com']
 
 # Application definition
 
@@ -84,19 +85,19 @@ WSGI_APPLICATION = 'main.wsgi.application'
 
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-    #     'default': { # 추가
-    #     'ENGINE': 'django.db.backends.mysql',
-    #     'NAME': 'django_db', # DB명
-    #     'USER': 'python', # 데이터베이스 계정
-    #     'PASSWORD':'python', # 계정 비밀번호
-    #     #'HOST':'localhost', # 데이테베이스 IP
-    #     'HOST':'mysql-svc', # rds ep
-    #     'PORT':'3306', # 데이터베이스 port
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': BASE_DIR / 'db.sqlite3',
     # }
+        'default': { # 추가
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'django_db', # DB명
+        'USER': 'python', # 데이터베이스 계정
+        'PASSWORD':'python', # 계정 비밀번호
+        #'HOST':'localhost', # 데이테베이스 IP
+        'HOST':'mysql-svc', # rds ep
+        'PORT':'3306', # 데이터베이스 port
+    }
 }
 
 
