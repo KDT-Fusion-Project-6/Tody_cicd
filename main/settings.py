@@ -30,7 +30,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-1md$_s_w4+@o@rwe48mp4r7l^0x#$oayc6^4o5@9!o0#qs8-0i'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 ALLOWED_HOSTS = ['*', 'local_host']
 CSRF_TRUSTED_ORIGINS = ['http://web.mymincloud.com', 'https://web.mymincloud.com', 'http://tody.mymincloud.com', 'https://tody.mymincloud.com']
 
