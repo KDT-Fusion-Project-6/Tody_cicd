@@ -297,7 +297,7 @@ $RECYCLE.BIN/
 
 # AWS
 aws_env.py
-aws_settings.py
+# aws_settings.py
 
 # pyc
 __pycache__/
