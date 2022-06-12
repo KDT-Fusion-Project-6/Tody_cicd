@@ -1,0 +1,7 @@
+AWS_ACCESS_KEY_ID = 'AKIA5VZTIAOJQ3EQTODI'
+AWS_SECRET_ACCESS_KEY = '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'
+
+# s3
+BUCKET_NAME = 'cloud06'
+REGION = 'ca-central-1'
+CLOUD_FRONT = "https://d16a0qg91qndd3.cloudfront.net/"
