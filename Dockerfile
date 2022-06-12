@@ -1,4 +1,9 @@
 FROM python:3.8
+
+# cv2 import error solve
+RUN apt-get update
+RUN apt-get -y install libgl1-mesa-glx
+
 WORKDIR /app/django
 
 ENV PYTHONIOENCODING=utf-8
@@ -13,22 +18,3 @@ CMD python3 manage.py migrate && \
 python3 manage.py runserver 0:8000
 
 EXPOSE 8000
-
-
-# FROM python:3.8
-
-# WORKDIR /usr/src/app
-
-# COPY . .
-
-# ENV PYTHONIOENCODING=utf-8
-
-# WORKDIR ./python_django_blogapp_restframework
-# RUN pip install -r requirements.txt
-#CMD ["python3", "manage.py", "migrate"]
-#CMD ["python3", "manage.py", "runserver", "0:8000"]
-
-# CMD python3 manage.py migrate && \
-# python3 manage.py runserver 0:8000
-
-# EXPOSE 8000
