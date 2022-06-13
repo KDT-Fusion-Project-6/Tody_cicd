@@ -52,4 +52,4 @@ jobs:
         env:
           KUBE_CONFIG_DATA: ${{ secrets.KUBE_CONFIG_DATA }}
         with:
-          args: rollout restart deployment/was
+          args: rollout restart deployment/was -n backend-ns
