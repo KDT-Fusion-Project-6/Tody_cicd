@@ -108,14 +108,14 @@ def closet_create(request, author_user):
                 "ContentType" : image.content_type
             }
         )
-        
-        extract_images_info = detect.run(weights = 'yolo\\pants\\best.pt',
+
+        extract_images_info = detect.run(weights = f'yolo/pants/best.pt',
                         source = str(image_url),
                         #source = 'media\\images\\3.jpg',
-                        data = 'yolov5\\data\\data.yaml',
+                        data = f'yolov5/data/data.yaml',
                         conf_thres = 0.3,
                         line_thickness = 4,
-                        project = 'media\\detect',
+                        project = f'media/detect',
                         view_img = False)
         
         items_to_list = list(extract_images_info.items())
