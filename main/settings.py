@@ -12,9 +12,8 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 
 from pathlib import Path
 import os
-
-
 import pymysql # 추가
+
 # pymysql django ORM 연동
 pymysql.install_as_MySQLdb() # 추가
 
